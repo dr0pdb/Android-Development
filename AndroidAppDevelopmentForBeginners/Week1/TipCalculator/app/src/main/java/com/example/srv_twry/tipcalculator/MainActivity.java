@@ -38,6 +38,14 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         setTipValues();
+
+        if (savedInstanceState !=null){
+            String initialAmount;
+            initialAmount=savedInstanceState.getString("totalAmount");
+            tvBillTotalAmount.setText(initialAmount);
+        }
+
+
     }
 
     private void setTipValues() {
@@ -80,6 +88,12 @@ public class MainActivity extends AppCompatActivity {
 
         tipTotal=(totalBillAmount*percentage)/100;
         finalBillAmount=totalBillAmount+tipTotal;
-
     }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState){
+        super.onSaveInstanceState(outState);
+        outState.putString("totalAmount",tvBillTotalAmount.getText().toString());
+    }
+
 }
