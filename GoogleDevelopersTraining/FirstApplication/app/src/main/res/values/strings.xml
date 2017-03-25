@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">FirstApplication</string>
+    <string name="tv_enter_message">Enter a message</string>
+    <string name="button_send">SEND</string>
 </resources>
