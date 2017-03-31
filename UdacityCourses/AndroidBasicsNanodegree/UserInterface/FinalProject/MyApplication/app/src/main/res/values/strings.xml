@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">BussinessCard</string>
-    <string name="tv_address">Address: New Bypass Road PATNA</string>
-    <string name="tv_name_Store">Pappu Mobile Store</string>
-    <string name="tv_mobile_number">Mobile: 2349563932</string>
-    <string name="tv_working_hours">Working Hours: 9:00 AM to 11 PM</string>
-</resources>
