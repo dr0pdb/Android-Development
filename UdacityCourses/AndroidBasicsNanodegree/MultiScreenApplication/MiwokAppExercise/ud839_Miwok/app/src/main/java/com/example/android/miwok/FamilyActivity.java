@@ -30,12 +30,12 @@ public class FamilyActivity extends AppCompatActivity {
 
         ArrayList<Word> words = new ArrayList<Word>();
 
-        words.add(new Word("father","apa"));
-        words.add(new Word("mother","ata"));
-        words.add(new Word("son","angsi"));
-        words.add(new Word("daughter","tune"));
-        words.add(new Word("olderbrother","taachi"));
-        words.add(new Word("youngerbrother","paapa"));
+        words.add(new Word("father","apa",R.drawable.family_father));
+        words.add(new Word("mother","ata",R.drawable.family_mother));
+        words.add(new Word("son","angsi",R.drawable.family_son));
+        words.add(new Word("daughter","tune",R.drawable.family_daughter));
+        words.add(new Word("olderbrother","taachi",R.drawable.family_older_brother));
+        words.add(new Word("youngerbrother","paapa",R.drawable.family_younger_brother));
 
         WordAdapter Adapter = new WordAdapter(this, words);
         ListView listView = (ListView) findViewById(R.id.list);
