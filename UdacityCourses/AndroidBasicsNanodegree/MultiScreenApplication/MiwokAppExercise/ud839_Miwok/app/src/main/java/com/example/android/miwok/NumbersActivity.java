@@ -15,13 +15,19 @@
  */
 package com.example.android.miwok;
 
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
 public class NumbersActivity extends AppCompatActivity {
+
+    private MediaPlayer mmediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +52,12 @@ public class NumbersActivity extends AppCompatActivity {
 
         listView.setAdapter(Adapter);
 
-
-
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                mmediaPlayer = MediaPlayer.create(NumbersActivity.this, R.raw.number_one);
+                mmediaPlayer.start();
+            }
+        });
     }
 }

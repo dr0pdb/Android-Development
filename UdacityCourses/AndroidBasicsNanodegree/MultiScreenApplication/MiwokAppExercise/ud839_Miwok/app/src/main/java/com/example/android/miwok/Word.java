@@ -1,10 +1,13 @@
 package com.example.android.miwok;
 
+import android.media.MediaPlayer;
+
 public class Word {
 
     private String defaulttranslation;
     private String mioktranslation;
     private int imageresourceid=NO_IMAGE_INSERTED;
+
 
     public static final int NO_IMAGE_INSERTED=-1;
 
