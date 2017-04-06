@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/media/srv_twry/work/OnlineCourses/Android-Development/UdacityCourses/AndroidBasicsNanodegree/Networking/ud843-QuakeReport-starting-point/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="517e9e977c086c2c52f3a94a4a79651529d5142d">
+        <dex dex="/media/srv_twry/work/OnlineCourses/Android-Development/UdacityCourses/AndroidBasicsNanodegree/Networking/ud843-QuakeReport-starting-point/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_58dc50dbc9bff7fa46780a062fc8e55115ac747f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/media/srv_twry/work/OnlineCourses/Android-Development/UdacityCourses/AndroidBasicsNanodegree/Networking/ud843-QuakeReport-starting-point/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
+        <dex dex="/media/srv_twry/work/OnlineCourses/Android-Development/UdacityCourses/AndroidBasicsNanodegree/Networking/ud843-QuakeReport-starting-point/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_f69f2eb68874073cd6048a8ea9157d933adf4cfb/classes.dex" />
+    </item>
+
+</items>
