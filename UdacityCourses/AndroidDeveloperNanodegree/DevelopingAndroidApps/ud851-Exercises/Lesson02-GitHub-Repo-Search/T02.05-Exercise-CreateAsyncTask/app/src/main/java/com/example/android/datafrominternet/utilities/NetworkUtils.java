@@ -30,7 +30,7 @@ import java.util.Scanner;
 public class NetworkUtils {
 
     final static String GITHUB_BASE_URL =
-            "https://api.github.com/search/repositories";
+            "http://api.github.com/search/repositories";
 
     final static String PARAM_QUERY = "q";
 
