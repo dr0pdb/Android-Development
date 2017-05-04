@@ -221,8 +221,21 @@ public class MainActivity extends AppCompatActivity implements ForecastAdapterOn
             return true;
         }
 
+        if (id == R.id.action_open_map){
+            Uri geoloc = Uri.parse("geo:47.6,-122.3");
+            showMap(geoloc);
+            return true;
+        }
         // TODO (2) Launch the map when the map menu item is clicked
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void showMap(Uri geoLocation){
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(geoLocation);
+        if (intent.resolveActivity(getPackageManager()) !=null){
+            startActivity(intent);
+        }
     }
 }
