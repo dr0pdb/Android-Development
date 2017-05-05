@@ -17,6 +17,7 @@ package com.example.android.asynctaskloader;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -34,7 +35,9 @@ public class MainActivity extends AppCompatActivity {
 
     // TODO (1) Create a static final key to store the query's URL
 
+
     // TODO (2) Create a static final key to store the search's raw JSON
+
 
     private EditText mSearchBoxEditText;
 
@@ -60,6 +63,10 @@ public class MainActivity extends AppCompatActivity {
         mLoadingIndicator = (ProgressBar) findViewById(R.id.pb_loading_indicator);
 
         // TODO (9) If the savedInstanceState bundle is not null, set the text of the URL and search results TextView respectively
+        if (savedInstanceState !=null){
+            mUrlDisplayTextView.setText(savedInstanceState.getString("textViewData"));
+            mSearchResultsTextView.setText(savedInstanceState.getString("jsonData"));
+        }
     }
 
     /**
@@ -149,6 +156,16 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        String textViewData = mUrlDisplayTextView.getText().toString();
+        outState.putString("textViewData",textViewData);
+
+        String jsonData = mSearchResultsTextView.getText().toString();
+        outState.putString("jsonData",jsonData);
     }
 
     // TODO (3) Override onSaveInstanceState to persist data across Activity recreation

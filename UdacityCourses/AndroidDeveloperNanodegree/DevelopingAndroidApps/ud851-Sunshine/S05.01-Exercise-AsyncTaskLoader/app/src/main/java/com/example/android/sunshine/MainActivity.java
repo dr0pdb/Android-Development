@@ -15,11 +15,14 @@
  */
 package com.example.android.sunshine;
 
+import android.content.AsyncTaskLoader;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v4.app.LoaderManager;
+import android.support.v4.content.Loader;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -39,7 +42,7 @@ import com.example.android.sunshine.utilities.OpenWeatherJsonUtils;
 import java.net.URL;
 
 // TODO (1) Implement the proper LoaderCallbacks interface and the methods of that interface
-public class MainActivity extends AppCompatActivity implements ForecastAdapterOnClickHandler {
+public class MainActivity extends AppCompatActivity implements ForecastAdapterOnClickHandler , LoaderManager.LoaderCallbacks<String[]> {
 
     private static final String TAG = MainActivity.class.getSimpleName();
 
@@ -48,7 +51,24 @@ public class MainActivity extends AppCompatActivity implements ForecastAdapterOn
 
     private TextView mErrorMessageDisplay;
 
+    @Override
+    public Loader<String[]> onCreateLoader(int id, Bundle args) {
+
+    }
+
+    @Override
+    public void onLoadFinished(Loader<String[]> loader, String[] data) {
+
+    }
+
+    @Override
+    public void onLoaderReset(Loader<String[]> loader) {
+
+    }
+
     private ProgressBar mLoadingIndicator;
+
+    private  static final int LOADER_ID=41;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
