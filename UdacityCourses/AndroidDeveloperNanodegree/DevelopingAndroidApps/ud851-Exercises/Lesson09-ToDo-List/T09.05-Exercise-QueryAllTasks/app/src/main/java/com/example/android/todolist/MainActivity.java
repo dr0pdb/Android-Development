@@ -147,6 +147,7 @@ public class MainActivity extends AppCompatActivity implements
                 // Will implement to load data
 
                 // TODO (5) Query and load all task data in the background; sort by priority
+                tr
                 // [Hint] use a try/catch block to catch any errors in loading data
 
                 return null;
